@@ -9,6 +9,10 @@ class OpenFileLink(sublime_plugin.TextCommand):
     def __init__(self, view):
         sublime_plugin.TextCommand.__init__(self, view)
 
+    def is_markdown_file(self):
+        _file, ext = os.path.splitext(self.view.file_name())
+        return ext == '.md'
+
     def get_word(self, event):
         cursor_point = self.view.window_to_text((event["x"], event["y"]))
         region = self.view.extract_scope(cursor_point)
@@ -26,13 +30,22 @@ class OpenFileLink(sublime_plugin.TextCommand):
         return True
 
     def is_visible(self, event):
+        if not self.is_markdown_file():
+            return False
+
         word = self.get_word(event)
         if word == None:
             return False
         return True
 
     def run(self, _edit, event):
+        if not self.is_markdown_file():
+            return
+
         word = self.get_word(event)
+        if word == None:
+            return
+
         directory = os.path.dirname(self.view.file_name())
         file_path = os.path.join(directory, word)
         normalized_path = os.path.abspath(file_path) # account for relative paths `../foo.md`
@@ -48,3 +61,4 @@ class OpenFileLink(sublime_plugin.TextCommand):
             return
         window = sublime.active_window()
         window.open_file(normalized_path)
+        window.run_command('reveal_in_side_bar')
