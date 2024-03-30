@@ -11,7 +11,7 @@ class OpenFileLink(sublime_plugin.TextCommand):
 
     def is_markdown_file(self):
         _file, ext = os.path.splitext(self.view.file_name())
-        return ext == '.md'
+        return ext == '.md' or ext == '.mdx'
 
     def get_word(self, event):
         cursor_point = self.view.window_to_text((event["x"], event["y"]))
