@@ -45,4 +45,4 @@ Go to [[./cat_picture.jpg]]
 
 ## Credits
 
-Big thanks to [https://github.com/OdatNurd](OdatNurd) for always fielding Sublime Text plugin development questions.
+Big thanks to [OdatNurd](https://github.com/OdatNurd) for always fielding Sublime Text plugin development questions.
