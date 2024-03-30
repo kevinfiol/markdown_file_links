@@ -1,4 +1,4 @@
-# sublime markdown file links
+# markdown file links
 
 A way to link to other Markdown (and non-Markdown) files from your Markdown notes.
 
@@ -8,13 +8,13 @@ https://github.com/kevinfiol/sublime_markdown_file_links/assets/4752973/0c9350ca
 
 ### Package Control
 
-`sublime_markdown_file_links` is available on [Package Control](https://packagecontrol.io/packages/sublime_markdown_file_links).
+`markdown_file_links` is available on [Package Control](https://packagecontrol.io/packages/markdown_file_links).
 
 ### Manually
 
 1. Navigate to your `Packages` folder (easiest way to find it is from within Sublime Text, go to `Preferences > Browse Packages...`).
-2. Download the latest release from the [releases page](https://github.com/kevinfiol/sublime_markdown_file_links/releases).
-3. Unzip the downloaded archive. Copy the directory `sublime_markdown_file_links-x.x.x` into your `Packages` folder.
+2. Download the latest release from the [releases page](https://github.com/kevinfiol/markdown_file_links/releases).
+3. Unzip the downloaded archive. Copy the directory `markdown_file_links-x.x.x` into your `Packages` folder.
 
 ### With Git
 
@@ -22,7 +22,7 @@ Use `git clone` to clone this repository into your `Packages` folder.
 
 ```bash
 # From within your `Packages` folder
-git clone https://github.com/kevinfiol/sublime_markdown_file_links.git
+git clone https://github.com/kevinfiol/markdown_file_links.git
 ```
 
 ## Usage
