@@ -42,3 +42,7 @@ Go to [[../../todos]]
 
 Go to [[./cat_picture.jpg]]
 ```
+
+## Credits
+
+Big thanks to [https://github.com/OdatNurd](OdatNurd) for always fielding Sublime Text plugin development questions.
