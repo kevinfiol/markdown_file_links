@@ -36,8 +36,15 @@ class OpenFileLink(sublime_plugin.TextCommand):
         directory = os.path.dirname(self.view.file_name())
         file_path = os.path.join(directory, word)
         normalized_path = os.path.abspath(file_path) # account for relative paths `../foo.md`
+
+        # check extension
+        _file, ext = os.path.splitext(normalized_path)
+        if ext == '':
+            # default to markdown
+            normalized_path += '.md'
+
         if not os.path.isfile(normalized_path):
-            print('Markdown Link: is not real path: ' + normalized_path)
+            print('sublime_file_links: is not real path: ' + normalized_path)
             return
         window = sublime.active_window()
         window.open_file(normalized_path)
