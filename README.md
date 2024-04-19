@@ -6,10 +6,6 @@ https://github.com/kevinfiol/sublime_markdown_file_links/assets/4752973/0c9350ca
 
 ## Installation
 
-### Package Control
-
-`markdown_file_links` is available on [Package Control](https://packagecontrol.io/packages/markdown_file_links).
-
 ### Manually
 
 1. Navigate to your `Packages` folder (easiest way to find it is from within Sublime Text, go to `Preferences > Browse Packages...`).
